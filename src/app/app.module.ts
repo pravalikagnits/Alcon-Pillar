@@ -7,6 +7,8 @@ import { TournamentComponent } from './views/tournament/tournament.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { HeaderComponent } from './views/partials/header/header.component';
+import { FooterComponent } from './views/partials/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RegisterComponent } from './views/register/register.component';
     TournamentComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
