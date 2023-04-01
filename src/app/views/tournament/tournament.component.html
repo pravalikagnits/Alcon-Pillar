@@ -1,1 +1,52 @@
-<p>tournament works!</p>
+<main class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col md-8">
+            <h3>
+                <%= title %>
+            </h3>
+            <a href="/tournamentsList/add" class="btn btn-primary my-3" role="button">
+                <i class="fas fa-plus-circle"></i>Create Tournament</a>
+            <br>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Owner</th>
+                        <th scope="col">Sports Type</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Team Count</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody *ngFor='let tournament of Tournaments'>
+                    <tr>
+                        <td>
+                            {{tournament.title}}
+                        </td>
+                        <td>
+                            {{tournament.owner}}
+                        </td>
+                        <td>
+                            {{tournament.sportType}}
+                        </td>
+                        <td>
+                            {{tournament.location}}
+                        </td>
+                        <td>
+                            {{tournament.teamCount}}a
+                        </td>
+
+                        <!-- <td class="text-center col-1"><a
+                            href="/tournamentsList/edit/<%=tournamentList[count]._id%>"
+                            class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Edit</a></td>
+                    <td class="text-center col-1"><a
+                            href="/tournamentsList/delete/<%=tournamentList[count]._id%>"
+                            class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

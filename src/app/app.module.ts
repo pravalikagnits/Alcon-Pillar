@@ -9,6 +9,7 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { HeaderComponent } from './views/partials/header/header.component';
 import { FooterComponent } from './views/partials/footer/footer.component';
+import { ModelModule } from './model/model.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './views/partials/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
