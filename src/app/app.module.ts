@@ -10,6 +10,9 @@ import { RegisterComponent } from './views/register/register.component';
 import { HeaderComponent } from './views/partials/header/header.component';
 import { FooterComponent } from './views/partials/footer/footer.component';
 import { ModelModule } from './model/model.module';
+import { AddTournamentComponent } from './views/add-tournament/add-tournament.component';
+import { FormsModule } from '@angular/forms';
+import { EditTournamentComponent } from './views/edit-tournament/edit-tournament.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { ModelModule } from './model/model.module';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AddTournamentComponent,
+    EditTournamentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModelModule
+    ModelModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

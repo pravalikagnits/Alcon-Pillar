@@ -4,7 +4,7 @@
             <h3>
                 <%= title %>
             </h3>
-            <a href="/tournamentsList/add" class="btn btn-primary my-3" role="button">
+            <a routerLink="/displayAddTournament" class="btn btn-primary my-3" role="button">
                 <i class="fas fa-plus-circle"></i>Create Tournament</a>
             <br>
 
@@ -35,15 +35,13 @@
                             {{tournament.location}}
                         </td>
                         <td>
-                            {{tournament.teamCount}}a
+                            {{tournament.teamCount}}
                         </td>
-
-                        <!-- <td class="text-center col-1"><a
-                            href="/tournamentsList/edit/<%=tournamentList[count]._id%>"
-                            class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Edit</a></td>
-                    <td class="text-center col-1"><a
-                            href="/tournamentsList/delete/<%=tournamentList[count]._id%>"
-                            class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td> -->
+<!-- todo change the rouer link displayEditTournament  -->
+                        <td><a  [routerLink]="['/tournamentsList/edit', tournament._id]" class="btn btn-primary"><i
+                                    class="fas fa-pencil-alt"></i>Edit</a></td>
+                        <td class="text-center col-1"><a (click)="deleteTournament(tournament._id)"
+                                class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>
                     </tr>
                 </tbody>
             </table>

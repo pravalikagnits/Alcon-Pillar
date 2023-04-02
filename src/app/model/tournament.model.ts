@@ -1,12 +1,14 @@
+import { Injectable } from "@angular/core";
+
+@Injectable()
 export class Tournament {
-    id: any;
-    constructor(
-        public _id: number,
-        public title?: String,
-        public owner?: String,
-        public sportType?: String,
-        public location?: String,
-        public teamCount?: Number
-    ) { }
-  }
+
+  public _id!: number;
+  public title!: string;
+  public owner!: string;
+  public sportType!: string;
+  public location!: string;
+  public teamCount!: number;
+  constructor() { }
+}
   
