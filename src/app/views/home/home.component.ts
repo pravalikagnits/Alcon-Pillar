@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+ public  welcomeMessage:String = "Welcome to Alcon Pillar";
+ public tournamentDescription:String = 'Compete like a champion and rise to the top with our'+
+ +'tournament app the ultimate platform for adrenaline-fueled'
+ +'battles and victorious triumphs.';
+
 }

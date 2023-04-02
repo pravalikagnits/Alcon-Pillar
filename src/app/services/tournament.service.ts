@@ -8,6 +8,7 @@ const PORT = 4000;
 
 @Injectable()
 export class TournamentService {
+
   baseUrl: string;
   constructor(private http: HttpClient) {
     this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
@@ -15,7 +16,7 @@ export class TournamentService {
   getTournamentList(): Observable<Tournament[]> {
     return this.http.get<Tournament[]>(this.baseUrl + "tournamentList");
   }
-  // saveOrder(order: Order): Observable<Order> {
-  //   return this.http.post<Order>(this.baseUrl + "orders", order);
+
+  // displayAddTournament() {
+  //   return this.http.get<Tournament>(this.baseUrl + "tournamentList/add");
   // }
-}

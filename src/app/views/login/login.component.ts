@@ -6,13 +6,6 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
-  'title': string;
-
-  constructor(private route: ActivatedRoute){}
-
-  ngOnInit():void{
-    this.title =this.route.snapshot.data['title'];}
 
 
 }
