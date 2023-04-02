@@ -14,9 +14,13 @@ const routes: Routes = [
   },
   {
     path: 'tournaments',
-    component: TournamentComponent,
-    data: { title: 'Tournament' },
+    
     children:[
+      {
+        path:'',
+        component: TournamentComponent,
+        data: { title: 'Tournament' },
+      },
       {
         path: 'add',
         component: AddTournamentComponent,
