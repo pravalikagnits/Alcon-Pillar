@@ -20,3 +20,17 @@ export class TournamentService {
   // displayAddTournament() {
   //   return this.http.get<Tournament>(this.baseUrl + "tournamentList/add");
   // }
+
+  addTournament(tournament: Tournament) {
+    return this.http.post<Tournament>(this.baseUrl + "tournamentsList/add", tournament);
+  }
+
+  getTournament(id: String) {
+    return this.http.get<Tournament>(
+      `${this.baseUrl}tournamentsList/edit/${id}`);
+  }
+
+  deleteTournament(id: number) {
+    return this.http.delete<Tournament>(`${this.baseUrl}tournamentsList/delete/${id}`);
+  }
+}
