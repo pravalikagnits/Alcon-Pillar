@@ -4,12 +4,15 @@ import { AddTournamentComponent } from './views/add-tournament/add-tournament.co
 import { EditTournamentComponent } from './views/edit-tournament/edit-tournament.component';
 import { HomeComponent } from './views/home/home.component';
 import { TournamentComponent } from './views/tournament/tournament.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, data: { title: 'Home' } },
   { path: 'tournamentsList', component: TournamentComponent, data: { title: 'Tournament' } },
   { path: 'displayAddTournament', component: AddTournamentComponent, data: { title: 'Add Tournament' } },
   { path: 'displayEditTournament', component: EditTournamentComponent, data: { title: 'edit Tournament' } },
+  { path: 'loginpage', component: LoginComponent, data: { title: 'Login' } },
+  // { path: 'bookList', component: BookStoreComponent, data: { title: 'Book Store' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
