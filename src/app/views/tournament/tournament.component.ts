@@ -10,6 +10,7 @@ import { TournamentRepository } from 'src/app/model/tournament.repository';
   styleUrls: ['./tournament.component.css']
 })
 export class TournamentComponent implements OnInit {
+  public title:String='';
   constructor(private repository: TournamentRepository, private router: Router) { }
 
   ngOnInit(): void {
