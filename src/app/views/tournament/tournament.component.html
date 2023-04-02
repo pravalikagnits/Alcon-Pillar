@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-md-offset-3 col md-8">
             <h3>
-                <%= title %>
+                {{title}}
             </h3>
-            <a routerLink="/displayAddTournament" class="btn btn-primary my-3" role="button">
+            <a [routerLink]="['add']" class="btn btn-primary my-3" role="button">
                 <i class="fas fa-plus-circle"></i>Create Tournament</a>
             <br>
 
@@ -38,7 +38,7 @@
                             {{tournament.teamCount}}
                         </td>
 <!-- todo change the rouer link displayEditTournament  -->
-                        <td><a  [routerLink]="['/tournamentsList/edit', tournament._id]" class="btn btn-primary"><i
+                        <td><a  [routerLink]="['/tournaments', tournament._id]" class="btn btn-primary"><i
                                     class="fas fa-pencil-alt"></i>Edit</a></td>
                         <td class="text-center col-1"><a (click)="deleteTournament(tournament._id)"
                                 class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>
