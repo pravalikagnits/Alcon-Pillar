@@ -13,22 +13,28 @@ const routes: Routes = [
     data: { title: 'Home' }
   },
   {
-    path: 'tournamentsList',
+    path: 'tournaments',
     component: TournamentComponent,
-    data: { title: 'Tournament' }
+    data: { title: 'Tournament' },
+    children:[
+      {
+        path: 'add',
+        component: AddTournamentComponent,
+        data: { title: 'Add Tournament' }
+      },
+      {
+        path: ':id',
+        component: EditTournamentComponent,
+        data: { title: 'Edit Tournament' }
+      },
+    ]
   },
-  {
-    path: 'displayAddTournament',
-    component: AddTournamentComponent,
-    data: { title: 'Add Tournament' }
-  },
-  {
-    path: 'displayEditTournament',
-    component: EditTournamentComponent,
-    data: { title: 'edit Tournament' }
-  },
-  { path: 'loginpage', 
+  { path: 'login', 
   component: LoginComponent,
+   data: { title: 'Login' } 
+  },
+  { path: 'register', 
+   component: LoginComponent,
    data: { title: 'Login' } 
   },
   { path: '', 
